@@ -36,9 +36,7 @@ pipeline {
                 label "k8s"
             }
             steps{
-                {
-                 sh 'helm upgrade assv2 assv2'
-                }
+                sh 'helm upgrade assv2 assv2'
             }
         }
     }
