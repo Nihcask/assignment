@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment # Kubernetes resource kind we are creating
+kind: Deployment
 metadata:
   name: spring-boot-k8s-deployment
 spec:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-k8s
-          image: suresh394/kubernetes # Image that will be used to containers in the cluster
+          image: sachink0912/kubernetes
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster
