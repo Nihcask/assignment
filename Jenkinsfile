@@ -31,6 +31,13 @@ pipeline {
                 }
             }
         }
-        
+        stage('Deploy to K8s'){
+            agent {label"k8s"}
+            steps{
+                {
+                 sh 'helm upgrade assv2 assv2'
+                }
+            }
+        }
     }
 }
