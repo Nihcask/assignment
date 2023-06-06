@@ -36,7 +36,7 @@ pipeline {
                 label "k8s"
             }
             steps{
-                sh 'helm install assv2 /home/ubuntu/assv2/'
+                sh 'helm upgrade assv2 /home/ubuntu/assv2/'
             }
         }
     }
